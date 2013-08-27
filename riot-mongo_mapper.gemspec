@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.summary = %q{Riot assertions for MongoMapper}
-  s.add_dependency 'mongo_mapper', '~>0.9.0'
-  s.add_dependency 'riot', '~>0.12.3'
+  s.add_dependency 'mongo_mapper', '~> 0.12.0'
+  s.add_dependency 'riot', '~> 0.12.6'
 end
 
