@@ -24,7 +24,7 @@ module RiotMongoMapper
         when (validation.class.name =~ %r{Length} and options[:within])
           range = options[:within].to_a
           if (validation.options[:minimum] == range.first) and (validation.options[:maximum] == range.last)
-            pass("#{model} has '#{validation_type}' validation '#{validation_field}' with options #{options.inspect}")
+            pass("has '#{validation_type}' validation '#{validation_field}' with options #{options.inspect}")
           else
             fail("expected #{model} to have options #{options.inspect} on validation #{validation_type}")
           end
@@ -32,7 +32,7 @@ module RiotMongoMapper
         else
           options_valid = options.all? { |key,value| validation.options[key] == value }
           if options_valid
-            pass("#{model} has '#{validation_type}' validation '#{validation_field}' with options #{options.inspect}")
+            pass("has '#{validation_type}' validation '#{validation_field}' with options #{options.inspect}")
           else
             fail("expected #{model} to have options #{options.inspect} on validation #{validation_type}")
           end
